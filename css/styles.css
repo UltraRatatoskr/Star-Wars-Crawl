@@ -6,29 +6,32 @@ body {
 }
 
 .intro {
-    position: relative;
-    text-align: center;
-    display: block;
+    left: 25%;
+    top: 0%;
+    position: absolute;
+    /* text-align: center; */
+    /* display: block; */
     margin-top: auto;
     margin-bottom: auto;
     margin-left: auto;
     margin-right: auto;
     width: 50%;
-    animation: intro 10s;
-   /** animation-fill-mode: forwards;*/
+    animation: intro 13s;
+    animation-fill-mode: forwards;
+    z-index: 2;
 }
 
 .fade {
-    position: relative;
+    position: absolute;
     width: 100%;
-    min-height: 60vh;
+    min-height: 100vh;
     top: -25px;
     background-image: linear-gradient(0deg, transparent, black 75%);
     z-index: 1;
 }
 
 .star-wars {
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     position: relative;
     height: 800px;
@@ -38,16 +41,16 @@ body {
     font-weight: 600;
     letter-spacing: 6px;
     line-height: 150%;
-    perspective: 400px;
+    perspective: 1000px;
     text-align: justify;
 }
 
 .crawl {
     position: relative;
-    top: 9999px;
+    top: 6666px;
     transform-origin: 50% 100%;
     animation: crawl 60s linear;
-    animation-delay: 0s;
+    animation-delay: 10s;
 }
 
 .crawl>.title {
@@ -62,7 +65,7 @@ body {
 
 @keyframes crawl {
     0% {
-        top: 0;
+        top: 1500px;
         transform: rotateX(20deg) translateZ(0);
     }
 
@@ -74,7 +77,7 @@ body {
 
 @keyframes intro {
     0% {
-        transform: scale(2);
+        transform: scale(8);
     }
 
     100% {
